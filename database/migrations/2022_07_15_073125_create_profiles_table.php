@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email');
             $table->biginteger('user_id')->unsigned();
             $table->text('address');
             $table->string('gender');
@@ -24,9 +25,11 @@ return new class extends Migration
             $table->text('bio');
             $table->string('cv');
             $table->string('avatar');
+            $table->text('academic certificates');
+            $table->text('skills');
             $table->string('resume');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

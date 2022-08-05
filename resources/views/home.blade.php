@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/application-logo.css')}}">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>homePage</title>
+    <title>HomePage</title>
 </head>
 <body>
     <nav>
@@ -32,7 +32,7 @@
         <label class="logo">Jobs for Retiree</label>
         <ul>
             <li><a href="/home">Home</a></li>
-            <li><a href="/portfolio">Profile</a></li>
+            <li><a href="/profile">Profile</a></li>
             <li><a href="/companies">Companies</a></li>
             <li><a href="#">Jobs</a></li>
             <li><a href="#">Status</a></li>

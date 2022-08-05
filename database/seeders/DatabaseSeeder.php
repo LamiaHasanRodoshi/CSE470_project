@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Company;
 use App\Models\Job;
+use App\Models\Profile;
 
 
 class DatabaseSeeder extends Seeder
@@ -28,6 +29,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->count(20)->create();
         Company::factory()->count(20)->create();
         Job::factory()->count(20)->create();
+        Profile::factory()->count(20)->create();
 
         //Too old codes 
         //factory("App\Models\Company", 20)-> create();
