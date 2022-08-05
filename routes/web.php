@@ -31,6 +31,7 @@ Route::get('/home', function () {
 Route::get('/job', [app\Http\Controllers\JobController::class,"index"]);
 Route::get('/profile', [app\Http\Controllers\ProfileController::class,"index"]);
 Route::get('/job_category', [app\Http\Controllers\ProfileController::class,"index"]);
+Route::get('/search', [app\Http\Controllers\JobController::class,"search"]);
 //Route::get('/home',[app\Http\Controllers\HomeController::class,"index"]);
 //Auth::routes();
 
