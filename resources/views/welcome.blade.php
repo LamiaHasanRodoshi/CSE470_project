@@ -56,9 +56,9 @@
             <div>
                 {{View::make('profile')}}
             </div>
-            <div>
+            <!-- <div>
                 {{View::make('job_category')}}
-            </div>
+            </div> -->
 
 
 
