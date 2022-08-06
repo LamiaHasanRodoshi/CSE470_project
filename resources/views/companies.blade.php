@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
     <style>
+        .table{
+            /* background:black; */
+            border: 1px solid #ccc;
+            width: 100%;
+            padding: 5px;
+            margin: 5% 0;
+            box-shadow: 3px 3px 2px #ccc; 
+        }
         .text{
-            color:brown;  
+            color:brown; 
+           
         } 
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Company</title>
 </head>
 <body>
     <h1><b>Companies Info</b></h1>
@@ -23,18 +32,10 @@
             <tbody>
                    
                 <tr>
-                    <td>
-                        <img src="/avatar/logo2.png" alt="logo" width="80">
-                    </td>
-                    <td>
-                        <h2 class="text">Company Name: <h3>Bangladesh Bank</h3></h2>
-                    </td>
-                    <td>
-                    <h2 class="text">Company Address: <h3>Bangladesh Bank</h3></h2>
-                    </td>
-                    <td>
-                    <h2 class="text">Date: <h3>5/8/2022</h3></h2>
-                    </td>
+                    <td><img src="/avatar/logo2.png" alt="logo" width="80"></td>
+                    <td><h2 class="text">Company Name: <h3>Bangladesh Bank</h3></h2></td>
+                    <td><h2 class="text">Company Address: <h3>Bangladesh Bank</h3></h2></td>
+                    <td><h2 class="text">Date: <h3>5/8/2022</h3></h2></td>
                     <td>
                         <a href="https://www.bb.org.bd/en/index.php">
                            <button class="btn btn-success btn-sm">View</button>

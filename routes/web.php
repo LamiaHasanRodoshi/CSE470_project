@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\JobController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,11 +28,11 @@ Route::get('/home', function () {
     return view('home');
 })->middleware(['auth'])->name('home');
 
-Route::get('/job', [app\Http\Controllers\JobController::class,"index"]);
-Route::get('/profile', [app\Http\Controllers\ProfileController::class,"index"]);
-Route::get('/job_category', [app\Http\Controllers\ProfileController::class,"index"]);
-Route::get('/search', [JobController::class,"search"]);
-//Route::get('/home',[app\Http\Controllers\HomeController::class,"index"]);
+Route::get('/job', [App\Http\Controllers\JobController::class,"index"]);
+Route::get('/profile', [App\Http\Controllers\ProfileController::class,"index"]);
+Route::get('/job_category', [App\Http\Controllers\ProfileController::class,"index"]);
+Route::get('/search', [App\Http\Controllers\JobController::class,"search"]);
+Route::get('/companies',[App\Http\Controllers\CompaniesController::class,"index"]);
 //Auth::routes();
 
 

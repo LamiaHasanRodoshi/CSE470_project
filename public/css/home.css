@@ -103,9 +103,15 @@ a:hover{
 }
 
 
-section{
-    background: url(/cover/homepage.jpg) no-repeat;
-    background-size: cover;
-    height: 500px;
-    width: 100%;
+@media (max-width:952px){
+    .image{
+        background: url(/cover/homepage.jpg) no-repeat;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+    }
+    .container{
+        
+    }
+   
 }
