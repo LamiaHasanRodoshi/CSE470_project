@@ -13,7 +13,8 @@ class JobController extends Controller
     }
 
     public function search(){
-        $search_text = $_GET['query'];
+        //dd(request()->search);
+        $search_text = request()->search;
         $jobs = Job::where('type','LIKE', '%'.$search_text.'%')->get();
         
         return view('jobs.search', compact('jobs'));

@@ -26,7 +26,7 @@
                                     </div>
                                     <!--end of col-->
                                     <div class="col">
-                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search by Full Time or Part Time or Seasonal or Temporary">
+                                        <input class="form-control form-control-lg form-control-borderless" type="text" name="search" placeholder="Search by Full Time or Part Time or Seasonal or Temporary">
                                     </div>
                                     <!--end of col-->
                                     <div class="col-auto">
