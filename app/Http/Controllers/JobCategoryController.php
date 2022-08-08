@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Job_categoryController extends Controller
+class JobCategoryController extends Controller
 {
     public function index(){
         

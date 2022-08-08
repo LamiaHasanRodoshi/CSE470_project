@@ -54,6 +54,7 @@
                     </thead>
                     <tbody>
                         @foreach($jobs as $job)      
+                        <!-- <tr @if ($loop->odd) bg-gray @endif> -->
                         <tr>
                             <th scope="row"><h4>{{$job->id}}</h4></th>
                             <td><h4>{{$job->company_name}}</h4></td>

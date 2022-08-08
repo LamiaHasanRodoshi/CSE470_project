@@ -4,20 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Profile;
-use App\Models\User;
 
-class ProfileController extends Controller
+class ProfileUpdateController extends Controller
 {
-    public function index(){
-    
-        $users = User::all();
-        $user_text = request()->users->name;
-        $profiles = Profile::where('name','LIKE', '%'.$user_text.'%')->get();
-    
-        return view('profile', compact('profiles') );
-    
-    }
-
     public function edit(Request $request){
         
         //dd($request->all());
@@ -32,5 +21,4 @@ class ProfileController extends Controller
 
         dd("saved");
     }
-    
 }

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <style>
+            .fixedheader{
+                /* position: fixed; */
+                padding-left: 50px;
+            }
+        </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('css/welcome.css')}}">
@@ -19,11 +25,16 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            
         </style>
     </head>
     <body class="antialiased">
         <!-- <nav class="absolute top-0 bg-aqua-500/[0.5] h-[70px] w-[100%]"></nav>  -->
+        <div class="fixedheader">
+            <h1>Job Searching Application for Retiree</h1>
+        </div>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -42,7 +53,7 @@
             <header class="header">
                 <div class="container">
                     <div class="title">
-                        <h1>Job Searching Application for Retiree</h1>
+                       
                     
                         <img src="/cover/coverpic.jpg" alt="cover image" >
                     </div>
@@ -51,19 +62,16 @@
             
               
         </div>
-            <!-- <div>{{View::make('job')}}
-            
-            </div> -->
-            <!-- <div>
-                {{View::make('profile')}}
-            </div> -->
+
             <div>
-                {{View::make('job_category')}}
+                {{View::make('jobcategory')}}
             </div>
+           
             <div>
                 {{View::make('companies')}}
             </div>
-        
+           
+           
         
     </body>
 </html>

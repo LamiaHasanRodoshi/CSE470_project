@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/JobController', index () );
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,9 +30,12 @@ Route::get('/home', function () {
 
 Route::get('/job', [App\Http\Controllers\JobController::class,"index"]);
 Route::get('/profile', [App\Http\Controllers\ProfileController::class,"index"]);
-Route::get('/job_category', [App\Http\Controllers\ProfileController::class,"index"]);
+//Route::post('/profile', [App\Http\Controllers\ProfileController::class,"edit"]);
+Route::get('/jobcategory', [App\Http\Controllers\JobCategoryController::class,"index"]);
 Route::get('/search', [App\Http\Controllers\JobController::class,"search"]);
-Route::get('/companies',[App\Http\Controllers\CompaniesController::class,"index"]);
+Route::get('/companies', [App\Http\Controllers\CompaniesController::class,"index"]);
+
+Route::post('/profile_update.create', [App\Http\Controllers\ProfileUpdateController::class,"edit"]);
 //Auth::routes();
 
 
