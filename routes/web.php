@@ -34,8 +34,12 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class,"index"]);
 Route::get('/jobcategory', [App\Http\Controllers\JobCategoryController::class,"index"]);
 Route::get('/search', [App\Http\Controllers\JobController::class,"search"]);
 Route::get('/companies', [App\Http\Controllers\CompaniesController::class,"index"]);
+Route::get('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"index"]);
+Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"show"]);
 
 Route::post('/profile_update.create', [App\Http\Controllers\ProfileUpdateController::class,"edit"]);
+Route::post('/retireejobstatusupdate.create', [App\Http\Controllers\RetireeJobStatusController::class,"edit"]);
+
 //Auth::routes();
 
 

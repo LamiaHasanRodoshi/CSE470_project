@@ -4,14 +4,23 @@
         <style>
             .fixedheader{
                 /* position: fixed; */
+                width:100%;
                 padding-left: 50px;
+                font-weight: bold;
+                background: #e09cf9;
+            }
+            .container{
+                margin:0px;
+                width:100%;
+                padding:0px;
+                
             }
         </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('css/welcome.css')}}">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <title>Job Searching Application for Retiree</title>
+        <title>Jobs for Retiree</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -31,7 +40,7 @@
     <body class="antialiased">
         <!-- <nav class="absolute top-0 bg-aqua-500/[0.5] h-[70px] w-[100%]"></nav>  -->
         <div class="fixedheader">
-            <h1>Job Searching Application for Retiree</h1>
+            <h1>Jobs for Retiree</h1>
         </div>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             
@@ -50,15 +59,15 @@
             @endif
             
        
-            <header class="header">
+            <!-- <header class="header"> -->
                 <div class="container">
-                    <div class="title">
+                    
                        
                     
-                        <img src="/cover/coverpic.jpg" alt="cover image" >
-                    </div>
+                        <img src="/cover/coverpic3.jpg" alt="cover image" >
+                    
                 </div>
-            </header>
+            <!-- </header> -->
             
               
         </div>

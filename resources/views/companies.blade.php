@@ -1,13 +1,23 @@
+@include('layouts.heading')
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
+        .container{
+            background:white;
+            padding-top:100px;
+            width:90%;
+            font-size: 20px;
+            padding-left:40px;
+        }
         .table{
             /* background:black; */
-            border: 1px solid #ccc;
+            border: 2px solid #ccc;
             width: 100%;
             padding: 5px;
-            margin: 5% 0;
+            margin: 2% 0;
             box-shadow: 3px 3px 2px #ccc; 
         }
         .text{
@@ -21,7 +31,8 @@
     <title>Company</title>
 </head>
 <body>
-    <h1><b>Companies Info</b></h1>
+   <div class="container">
+        <h1><b><u> Companies Info</u></b></h1>
     <table class="table">
             <thead>
                 <th></th>
@@ -46,6 +57,7 @@
             </tbody>
 
     </table>
+   </div>
     
 </body>
 </html>

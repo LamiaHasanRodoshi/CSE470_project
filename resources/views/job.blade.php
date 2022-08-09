@@ -1,25 +1,47 @@
+@include('layouts.heading')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <style>
-        *{
-            background: #e09cf9;
+       body
+        {
+            background: #4f016b;
+            /* width: 20px; */
+            /* margin: auto; */
+            /* padding:40px; */
+            
         }
+
+        .search{
+            margin-top: 20px;
+            position:fixed;
+            width:100%;
+        }
+       
         .custab{
-            background: black;
-            border: 1px solid #ccc;
+            background: white;
+            border: 5px solid black;
             width: 100%;
             padding: 5px;
-            margin: 5% 0;
-            box-shadow: 3px 3px 2px #ccc;
-            transition: 0.5s;
+            margin: 15% 0;
+            /* box-shadow: 3px 3px 2px #ccc;
+            transition: 0.5s; */
             
-            }
-        .custab:hover{
+        }
+       .row{
+        padding:40px;
+        /* margin:20% 0; */
+       }
+       .label{
+        margin-top:100px;
+       }
+        /* .custab:hover{
             box-shadow: 3px 3px 0px transparent;
             transition: 0.5s;
-            }
+            } */
         h1{
+            margin-top:100px;
             color:black;
         }
         h2{
@@ -38,8 +60,11 @@
     <title>Jobs</title>
 </head>
 <body>
+<div class="search">{{View::make('jobcategory')}}</div>
     <div class="row">
+        <div class="label">
         <h1><b><u>  Recent Jobs</u></b></h1>
+        </div>
             <table class="table table-striped custab">
                     <thead>
                         <tr>
