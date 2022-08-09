@@ -144,6 +144,7 @@
             <li><a href="/job">Jobs</a></li>
             <li><a href="/companies">Companies</a></li>
             <li><a href="/retireejobstatus">Job Status</a></li>
+            <li><a href="/dashboard">Logout</a></li>
             <!-- <li><a href="/about">About</a></li> -->
         </ul>
     </nav>

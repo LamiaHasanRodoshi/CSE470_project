@@ -117,14 +117,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/application-logo.css')}}">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>heading</title>
+    <title>Dashboard</title>
 </head>
 <body>
     <nav>
-        <!-- <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label> -->
         <label class="logo">Jobs for Retiree</label>
         <ul>
             <li><a href="/home">Home</a></li>
@@ -132,6 +128,7 @@
             <li><a href="/job">Jobs</a></li>
             <li><a href="/companies">Companies</a></li>
             <li><a href="/retireejobstatus">Job Status</a></li>
+            <li><a href="/dashboard">Logout</a></li>
             <!-- <li><a href="/about">About</a></li> -->
         </ul>
     </nav>

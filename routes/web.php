@@ -33,12 +33,18 @@ Route::get('/profile', [App\Http\Controllers\ProfileController::class,"index"]);
 //Route::post('/profile', [App\Http\Controllers\ProfileController::class,"edit"]);
 Route::get('/jobcategory', [App\Http\Controllers\JobCategoryController::class,"index"]);
 Route::get('/search', [App\Http\Controllers\JobController::class,"search"]);
-Route::get('/companies', [App\Http\Controllers\CompaniesController::class,"index"]);
+
+Route::get('/companies', [App\Http\Controllers\CompanyController::class,"index"]);
+Route::get('/company.ad', [App\Http\Controllers\CompanyController::class,"editad"]);
+Route::get('/company.post', [App\Http\Controllers\CompanyController::class,"addpost"]);
+
 Route::get('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"index"]);
 Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"show"]);
 
 Route::post('/profile_update.create', [App\Http\Controllers\ProfileUpdateController::class,"edit"]);
 Route::post('/retireejobstatusupdate.create', [App\Http\Controllers\RetireeJobStatusController::class,"edit"]);
+Route::post('/company.ad', [App\Http\Controllers\CompanyController::class,"index"]);
+Route::post('/company.post', [App\Http\Controllers\CompanyController::class,"index"]);
 
 //Auth::routes();
 
