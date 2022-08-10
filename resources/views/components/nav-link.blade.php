@@ -20,7 +20,15 @@ $classes = ($active ?? false)
     <title>Home</title>
 </head>
 <body>
-    <h2><a href="{{route('home')}}">Home</a> </h2>
-    
+    @if(Auth()->user()->role == 'employee')
+        <div>
+            <h2><a href="{{route('home')}}">Home</a> </h2>
+        </div>
+    @elseif(Auth()->user()->role == 'manager' )
+        <div>
+            <h2><a href="{{route('homeformanager')}}">Home</a> </h2>
+        </div>
+    @endif
+    <!-- <h2><a href="{{route('home')}}">Home</a> </h2> -->
 </body>
 </html>

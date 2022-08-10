@@ -1,4 +1,4 @@
-@extends("home")
+@include('layouts.heading')
 
 <!DOCTYPE html>
 <html lang="en">

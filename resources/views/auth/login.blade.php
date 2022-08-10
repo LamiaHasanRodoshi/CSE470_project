@@ -48,6 +48,12 @@
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
+                     <!-- User Role -->
+                     <div>
+                        <x-label for="role" :value="__('Role')" />
+
+                        <x-input id="role" class="block mt-1 w-full" type="text" name="role" :value="old('role')" required autofocus />
+                    </div>
 
                     <!-- Email Address -->
                     <div>

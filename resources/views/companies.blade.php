@@ -1,13 +1,22 @@
-@include('layouts.heading')
+@include('layouts.headingformanager')
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
+        <style> 
+        .container{
+            background:white;
+            padding-top:100px;
+            width:90%;
+            font-size: 20px;
+            padding-left:40px;
+            border: black solid 2px;
+        }
         .container-fluid{
             background:#e09cf9;
             padding:100px;
             width:100%;
+            height:850px;
             font-size: 15px;
         }
         .row{
@@ -35,45 +44,44 @@
             <div class="row">
                 <div class="col-md-3 ">
                     <div class="list-group ">
+                    <a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a>
                     <a href="/company.post" class="list-group-item list-group-item-action">Add new Post</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action ">Add new Ad</a>
                     
                     </div> 
                 </div>
                 <div class="col-md-9">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-3 border-right">
-                                    <h4>Add New Post</h4>
-                                </div>
-                                
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <form>
-                                    <div class="form-group row">
-                                        <label for="text" class="col-12 col-form-label">Enter Title here</label> 
-                                        <div class="col-12">
-                                        <input id="text" name="text" placeholder="Enter Title here" class="form-control here" required="required" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="textarea" class="col-12 col-form-label">About</label> 
-                                        <div class="col-12">
-                                        <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
-                                        </div>
-                                    </div> 
-                                    <div class="card-footer bg-light">
-                                            <button type="button" class="btn btn-primary btn-sm">Add Post</button>
-                                    </div>
-                                    </form>
-                                </div>
-                                
-                            </div>
+                    <div class="container">
+                        <div class="row col-md-6 col-md-offset-2 custyle">
+
+                            <table class="table table-striped custab">
+                            <thead>
+                           
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>Ads</th>
+                                    <th>Videos</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($ads as $ad)
+                                    <tr>
+                                        <td>{{$ad->id}}</td>
+                                        <td>{{$ad->title}}</td>
+                                        <td>{{$ad->ad}}</td>
+                                        <td>{{$ad->video}}</td>
+                                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
+                                    </tr>
+                                   
+                                @endforeach
+                            </tbody>
+                            </table>
                         </div>
                     </div>
+
+                    
                 </div>
             </div>
         </div>
@@ -88,66 +96,3 @@
 
 
 
-<!-- @include('layouts.heading')
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>
-        .container{
-            background:white;
-            padding-top:100px;
-            width:90%;
-            font-size: 20px;
-            padding-left:40px;
-        }
-        .table{
-            /* background:black; */
-            border: 2px solid #ccc;
-            width: 100%;
-            padding: 5px;
-            margin: 2% 0;
-            box-shadow: 3px 3px 2px #ccc; 
-        }
-        .text{
-            color:brown; 
-           
-        } 
-    </style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company</title>
-</head>
-<body>
-   <div class="container">
-        <h1><b><u> Companies Info</u></b></h1>
-    <table class="table">
-            <thead>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </thead>
-            <tbody>
-                   
-                <tr>
-                    <td><img src="/avatar/logo2.png" alt="logo" width="80"></td>
-                    <td><h2 class="text">Company Name: <h3>Bangladesh Bank</h3></h2></td>
-                    <td><h2 class="text">Company Address: <h3>Bangladesh Bank</h3></h2></td>
-                    <td><h2 class="text">Date: <h3>5/8/2022</h3></h2></td>
-                    <td>
-                        <a href="https://www.bb.org.bd/en/index.php">
-                           <button class="btn btn-success btn-sm">View</button>
-                        </a>
-                    </td>
-                </tr>
-            
-            </tbody>
-
-    </table>
-   </div>
-    
-</body>
-</html> -->

@@ -1,9 +1,18 @@
-@include('layouts.heading')
+@include('layouts.headingformanager')
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <style>
+        .container{
+            background:white;
+            padding-top:100px;
+            width:90%;
+            font-size: 20px;
+            padding-left:40px;
+            border: black solid 2px;
+        }
+
         .container-fluid{
             background:#e09cf9;
             padding:100px;
@@ -36,6 +45,7 @@
                 <div class="col-md-3 ">
                     <div class="list-group ">
                     <a href="/company.post" class="list-group-item list-group-item-action active">Add new Post</a>
+                    <a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action ">Add new Ad</a>
                     <a href="/companies" class="list-group-item list-group-item-action ">Back</a>
                     
@@ -54,6 +64,7 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <form>
+                                        @csrf
                                     <div class="form-group row">
                                         <label for="text" class="col-12 col-form-label">Enter Title here</label> 
                                         <div class="col-12">
@@ -75,6 +86,8 @@
                             </div>
                         </div>
                     </div>
+
+                    
                 </div>
             </div>
         </div>

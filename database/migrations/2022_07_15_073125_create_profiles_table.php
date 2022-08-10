@@ -27,7 +27,6 @@ return new class extends Migration
             $table->string('avatar');
             $table->text('academic certificates');
             $table->text('skills');
-            $table->string('resume');
             $table->timestamps();
             // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
