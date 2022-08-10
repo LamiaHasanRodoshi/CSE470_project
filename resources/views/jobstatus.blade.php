@@ -22,7 +22,7 @@
             
         }
        .row{
-        padding:40px;
+        padding:20px;
         /* margin:20% 0; */
        }
        .label{
@@ -38,6 +38,7 @@
         }    
         h4{
             color:black;
+            padding:0px;
         }
         .btn{
             color:black;

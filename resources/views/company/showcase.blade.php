@@ -5,29 +5,25 @@
 <head>
     <style>
       
-        .search{
-            margin-top: 20px;
-            position:fixed;
-            width:100%;
-        }
+       body{
+        background:#e09cf9;
+       }
        
         .custab{
             background: white;
-            border: 5px solid black;
-            width: 100%;
+            width:100%;
+            border: 10px solid black;
             padding: 5px;
             margin: 15% 0;
-            /* box-shadow: 3px 3px 2px #ccc;
-            transition: 0.5s; */
+            
             
         }
        .row{
-        padding:40px;
+        padding:100px;
+        padding-left:200px;
         /* margin:20% 0; */
        }
-       .label{
-        margin-top:100px;
-       }
+       
     
         h1{
             margin-top:100px;
@@ -36,9 +32,7 @@
         h2{
             color:black;
         }    
-        h4{
-            color:black;
-        }
+        
         .btn{
             color:black;
         }
@@ -54,47 +48,33 @@
             <div class="label">
             <h1><b><u>Companies</u></b></h1>
             </div>
+
+            @foreach($shows as $show)
                 <table class="table table-striped custab">
-                        <!-- <thead>
-                            <tr>
-                                <th scope="col"><h2>#</h2></th>
-                                <th scope="col"><h2><u>Logo</u></h2></th>
-                                <th scope="col"><h2><u>Company Name</u></h2></th>
-                                <th scope="col"><h2><u>Description</u></h2></th>
-                                <th scope="col"><h2><u>Address</u></h2></th>
-                                <th scope="col"><h2><u>Website</u></h2></th>
-                                <th scope="col"><h2><u>Slogan</u></h2></th>
-                                <th scope="col"><h2><u>Action</u></h2></th>
-                            </tr>
-                        </thead> -->
-                        
-                            
-                            @foreach($shows as $show)
                                 <div class="container">
                                     <div class="row col-md-6 col-md-offset-2 custyle">
                                 
                                         <div class="col-md-10 blogShort">
-                                                <h3>{{$show->id}}</h3>
-                                                <h3>{{$show->logo}}</h3>
-                                                <img src="{{$ad->video}}" alt="Ad img" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                                        
+                                               <tr> <h3>{{$show->id}}</h3></tr>
+                                               <tr>  <h3>{{$show->logo}}</h3></tr>
                                                 
-                                                <h4>{{$show->c_name}}</h4>
-                                                <h1>Description:</h1>
-                                                <article><p>{{$show->description}}</p></article>
-                                                <h1>Address:</h1>
-                                                <h4>{{$show->address}}</h4>
-                                                <h1>Website:</h1>
-                                                <h4>{{$show->website}}</h4>
-                                                <h1>Slogan:</h1>
-                                                <h4>{{$show->slogan}}</h4>
-                                                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span>Apply</a> 
+                                               <tr><h1><u><font color="red" size="15px">{{$show->c_name}}</font></u></h1></tr>
+                                               <tr><h1><font color="blue"> Description:</font></h1></tr>
+                                               <tr><article><p><h2>{{$show->description}}</h2></p></article></tr>
+                                               <tr> <h1><font color="blue">Address:</font></h1></tr>
+                                               <tr> <h2>{{$show->address}}</h2></tr>
+                                               <tr><h1><font color="blue">Website:</font></h1></tr>
+                                               <tr><h2>{{$show->website}}</h2></tr>
+                                               <tr><h1><font color="blue">Slogan:</font></h1></tr>
+                                               <tr> <h2>{{$show->slogan}}</h2></tr>
+                                               <td class="text-center"> <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span>Apply</a> 
                                                 
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
-
                 </table>
+                @endforeach
         </div>
 </body>
 </html>

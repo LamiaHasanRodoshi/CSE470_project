@@ -50,6 +50,7 @@
                     <td>News Cate</td>
                     <td>News Cate</td>
                     <td>News Cate</td>
+                </tr>    
         </tbody>    
     </table>
     </div>
