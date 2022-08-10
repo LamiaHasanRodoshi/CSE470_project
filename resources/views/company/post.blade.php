@@ -63,22 +63,34 @@
                             <hr>
                             <div class="row">
                                 <div class="col-md-8">
-                                    <form>
+                                <form action="{{url('/company.post')}}" method="post">
                                         @csrf
                                     <div class="form-group row">
                                         <label for="text" class="col-12 col-form-label">Enter Title here</label> 
                                         <div class="col-12">
-                                        <input id="text" name="text" placeholder="Enter Title here" class="form-control here" required="required" type="text">
+                                        <input id="text" name="title" :value= "old('title')" placeholder="Enter Title here" class="form-control here" required="required" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="textarea" class="col-12 col-form-label">About</label> 
+                                        <label for="text" class="col-12 col-form-label">Enter Post description</label> 
                                         <div class="col-12">
-                                        <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+                                        <input id="text" name="post" :value= "old('post')" placeholder="Enter description here" class="form-control here" required="required" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="file" class="col-12 col-form-label">Upload Photo</label> 
+                                        <div class="col-12">
+                                        <input class="browse-input" type="file" name="photo" :value= "old('photo')" required name="UploadedFile" id="UploadedFile"/>
+                                        </div>
+                                    </div> 
+                                    <div class="form-group row">
+                                        <label for="file" class="col-12 col-form-label">Upload video</label> 
+                                        <div class="col-12">
+                                        <input class="browse-input" type="file" name="video" :value= "old('video')" required name="UploadedFile" id="UploadedFile"/>
                                         </div>
                                     </div> 
                                     <div class="card-footer bg-light">
-                                            <button type="button" class="btn btn-primary btn-sm">Add Post</button>
+                                            <button type="submit" class="btn btn-primary btn-sm">Upload Post</button>
                                     </div>
                                     </form>
                                 </div>

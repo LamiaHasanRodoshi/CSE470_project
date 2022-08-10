@@ -29,7 +29,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company</title>
+    <title>Show Post</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,37 +52,28 @@
                     </div> 
                 </div>
                 <div class="col-md-9">
+                @foreach($posts as $post)
                     <div class="container">
                         <div class="row col-md-6 col-md-offset-2 custyle">
-
-                            <table class="table table-striped custab">
-                            <thead>
-                           
+                       
+                            <div class="col-md-10 blogShort">
+                                    <h3>{{$post->id}}</h3>
+                                    <h1>{{$post->title}}</h1>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Title</th>
-                                    <th>Post</th>
-                                    <th>Photos</th>
-                                    <th>Videos</th>
-                                    <th class="text-center">Action</th>
+                                    <img src="{{$post->photo}}" alt="Post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
                                 </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($posts as $post)
-                                    <tr>
-                                        <td>{{$post->id}}</td>
-                                        <td>{{$post->title}}</td>
-                                        <td>{{$post->post}}</td>
-                                        <td>{{$post->photo}}</td>
-                                        <td>{{$post->video}}</td>
-                                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
-                                    </tr>
-                                   
-                                @endforeach
-                            </tbody>
-                            </table>
+                                <tr>
+                                    <img src="{{$post->video}}" alt="Post video" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                                </tr>
+                               
+                                    
+                                    <article><p>{{$post->post}} </p></article>
+                                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                                    <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td> 
+                            </div>
                         </div>
                     </div>
+                 @endforeach
 
                     
                 </div>

@@ -34,7 +34,7 @@
 <div class="container-fluid">
 	<div class="row">
 		
-		 <div class="col-md-9">
+		 <div class="col-md-7">
 		    <div class="card">
 		        <div class="card-body">
                 <div class="row">
@@ -45,7 +45,12 @@
 		            <hr>
 		            <div class="row">
 		                <div class="col-md-8">
-        		            <form action="{{url('/retireejobstatusupdate.create')}}" method="post">
+
+                              @if(session()->has('success'))
+                                    <strong class="text-success">{{session()->get('success')}}</strong>
+                              @endif
+
+        		            <form action="{{url('/retireejobstatus')}}" method="post">
                               @csrf
                                 <div class="form-group">
                                     <label>Full Name:</label>
@@ -53,10 +58,17 @@
                                     <span class="Error"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label>User ID:</label>
-                                    <input class="form-control" type="text" name="id" required placeholder="Enter Your User ID"/>
+                                    <label>User Email:</label>
+                                    <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" required placeholder="Enter Your Email"/>
                                     <span class="Error"></span>
-                                </div> 
+
+                                    @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong><h4>'Email has already taken'</h4></strong>
+                                            </span>
+                                    @enderror
+                                </div>
+                                
                                 <div class="form-group row">
                                 <label for="text" class="col-12 col-form-label">Enter Number of Applying Jobs</label> 
                                 <div class="col-12">

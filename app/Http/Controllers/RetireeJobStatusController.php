@@ -25,16 +25,28 @@ class RetireeJobStatusController extends Controller
 
     public function edit(Request $request){
         
+        $request->validate([
+            'email' => 'required|unique:retiree_job_statuses',
+        ]);
+
         //dd($request->all());
         $status = new RetireeJobStatus();
-        // $status->user_name = $request->fullname;
-        // $status->user_id = $request->id;
+
+        $status->user_name = $request->fullname;
+        $status->email = $request->email;
         $status->applying_job = $request->applying;
         $status->approved_job = $request->approved;
         $status->rejected_job = $request->rejected;
 
         $status->save();
 
-        dd("saved");
+        //dd("saved");
+        return redirect()->back()->with('success','successfully added..!!!');
+    }
+
+    public function status_show()
+    {
+        $statuses = RetireeJobStatus::all();
+        return view('jobstatus', compact('statuses'));
     }
 }

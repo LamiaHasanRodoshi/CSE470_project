@@ -21,7 +21,7 @@
         nav{
             position:fixed;
             background: #4f016b;
-            height: 80px;
+            height: 90px;
             width: 100%;
         }
 
@@ -81,6 +81,8 @@
             nav ul li a{
                 font-size: 16px;
             }
+
+            
         }
 
         @media (max-width:100%){
@@ -108,7 +110,15 @@
                 background: none;
                 color: #521668;
                 
+                
             }
+        }
+        
+        .box{
+            background: white;
+            height: 50px;
+            
+            padding-bottom: 15px;
         }
 
     </style>
@@ -126,10 +136,11 @@
             <li><a href="/home">Home</a></li>
             <li><a href="/profile">Profile</a></li>
             <li><a href="/job">Jobs</a></li>
-            <li><a href="/companies">Companies</a></li>
+            <li><a href="/company.showcase">Companies</a></li>
             <li><a href="/retireejobstatus">Job Status</a></li>
             <li><a href="/dashboard">Logout</a></li>
-            <!-- <li><a href="/about">About</a></li> -->
+            <li class="box">{{ Auth::user()->name }}</li>
+            
         </ul>
     </nav>
 

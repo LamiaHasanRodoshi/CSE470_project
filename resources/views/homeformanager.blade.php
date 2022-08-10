@@ -21,7 +21,7 @@
         nav{
             position:fixed;
             background: #4f016b;
-            height: 80px;
+            height: 90px;
             width: 100%;
         }
 
@@ -122,6 +122,12 @@
             width:80%;
             margin-left:30px;
         }
+        .box{
+            background: white;
+            height: 50px;
+            
+            padding-bottom: 15px;
+        }
 
     </style>
     <meta charset="UTF-8">
@@ -143,9 +149,9 @@
             <li><a href="/companies">Company Profile</a></li>
             <li><a href="/job">Jobs</a></li>
             <li><a href="#">Employees</a></li>
-            <li><a href="/retireejobstatus">Job Status</a></li>
+            <li><a href="/jobstatus">Job Status</a></li>
             <li><a href="/dashboard">Logout</a></li>
-            <!-- <li><a href="/about">About</a></li> -->
+            <li class="box">{{ Auth::user()->name }}</a></li>
         </ul>
     </nav>
     

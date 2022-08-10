@@ -6,7 +6,7 @@
         <style> 
         .container{
             background:white;
-            padding-top:100px;
+            padding:100px;
             width:90%;
             font-size: 20px;
             padding-left:40px;
@@ -14,10 +14,11 @@
         }
         .container-fluid{
             background:#e09cf9;
-            padding:100px;
+            padding:200px;
             width:100%;
-            height:850px;
+            height:100%;
             font-size: 15px;
+            
         }
         .row{
            
@@ -51,36 +52,23 @@
                     </div> 
                 </div>
                 <div class="col-md-9">
+                @foreach($ads as $ad)
                     <div class="container">
                         <div class="row col-md-6 col-md-offset-2 custyle">
-
-                            <table class="table table-striped custab">
-                            <thead>
-                           
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Title</th>
-                                    <th>Ads</th>
-                                    <th>Videos</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($ads as $ad)
-                                    <tr>
-                                        <td>{{$ad->id}}</td>
-                                        <td>{{$ad->title}}</td>
-                                        <td>{{$ad->ad}}</td>
-                                        <td>{{$ad->video}}</td>
-                                        <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td>
-                                    </tr>
-                                   
-                                @endforeach
-                            </tbody>
-                            </table>
+                       
+                            <div class="col-md-10 blogShort">
+                                    <h3>{{$ad->id}}</h3>
+                                    <h1>{{$ad->title}}</h1>
+                                <img src="{{$ad->video}}" alt="Ad img" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                                
+                                    
+                                    <article><p>{{$ad->ad}} </p></article>
+                                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                                    <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td> 
+                            </div>
                         </div>
                     </div>
-
+                 @endforeach
                     
                 </div>
             </div>
