@@ -7,6 +7,7 @@ use App\Models\RetireeJobStatus;
 use App\Models\User;
 
 
+
 class RetireeJobStatusController extends Controller
 {
     public function index()
@@ -51,19 +52,15 @@ class RetireeJobStatusController extends Controller
         return view('jobstatus', compact('statuses'));
     }
 
-    public function status()
-    {
-        $statuses = RetireeJobStatus::all();
-        return view('retireejobstatusupdate.view', compact('statuses'));
-    }
+   
 
     public function user_status(){
-        $status = RetireeJobStatus::all();
+        
         $email = Auth()->user()->email;
-        //$status = RetireeJobStatus::find($email);
-        //return view('retireejobstatusupdate.view', compact('status'));
-       // echo $email;
-        echo $email;
+        $data = RetireeJobStatus::where('email', $email)->get();
+        return view('retireejobstatusupdate.view', ['statuses'=>$data]);
+    //    echo $data;
+    //     echo $email;
 
     }
 }

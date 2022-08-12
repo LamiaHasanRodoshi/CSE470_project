@@ -95,7 +95,7 @@
 </head>
 <body>
     <div class="container">
-        <p class="h2 text-center">Profile Update</p>
+        <p class="h2 text-center">Profile Create</p>
         <form action="{{ url('/profile_update.create')}}" method="post">
             @csrf
             <div class="preview text-center">
@@ -119,6 +119,31 @@
             <div class="form-group">
                 <label>Address:</label>
                 <input class="form-control" type="address" name="address" required placeholder="Enter your address"/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth:</label>
+                <input class="form-control" type="date" name="dob" required placeholder="Enter your date of birth"/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>bio:</label>
+                <input class="form-control" type="text" name="bio" required placeholder="Enter your bio"/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>cv:</label>
+                <input class="form-control" type="file" name="cv" required placeholder="Enter your CV"/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Experience:</label>
+                <input class="form-control" type="text" name="experience" required placeholder="Enter your experience"/>
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>skills:</label>
+                <input class="form-control" type="text" name="skills" required placeholder="Enter your skills"/>
                 <span class="Error"></span>
             </div>
             <div class="form-group">

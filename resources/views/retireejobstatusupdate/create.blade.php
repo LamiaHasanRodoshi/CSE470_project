@@ -71,7 +71,7 @@
         		        </div>
         		    </div>
                 <div class="list-group ">
-                            <a href="/retireejobstatusupdate.view">Show Job Status</a>
+                            <a href="/retireejobstatusupdate.view">Show My Job Status</a>
                     </div> 
 		        </div>
 		    </div>

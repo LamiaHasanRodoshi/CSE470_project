@@ -40,7 +40,7 @@ Route::get('/homeformanager', function () {
 })->middleware(['auth'])->name('homeformanager');
 
 Route::get('/job', [App\Http\Controllers\JobController::class,"index"]);
-Route::get('/profile', [App\Http\Controllers\ProfileController::class,"index"]);
+Route::get('/profile', [App\Http\Controllers\ProfileController::class,"show"]);
 //Route::post('/profile', [App\Http\Controllers\ProfileController::class,"edit"]);
 Route::get('/jobcategory', [App\Http\Controllers\JobCategoryController::class,"index"]);
 Route::get('/search', [App\Http\Controllers\JobController::class,"search"]);
@@ -56,7 +56,8 @@ Route::get('/company.updatead/{id}', [App\Http\Controllers\CompanyController::cl
 Route::get('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"index"]);
 Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"user_status"]);
 Route::get('/jobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"status_show"]);
-Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"status"]);
+//Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"status"]);
+Route::get('/profile_update.create', [App\Http\Controllers\ProfileUpdateController::class,"show"]);
 
 
 Route::post('/profile_update.create', [App\Http\Controllers\ProfileUpdateController::class,"edit"]);
