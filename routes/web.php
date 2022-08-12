@@ -48,21 +48,26 @@ Route::get('/search', [App\Http\Controllers\JobController::class,"search"]);
 Route::get('/companies', [App\Http\Controllers\CompanyController::class,"index"]);
 Route::get('/company.ad', [App\Http\Controllers\CompanyController::class,"add_ad"]);
 Route::get('/company.post', [App\Http\Controllers\CompanyController::class,"add_post"]);
-Route::get('/companies', [App\Http\Controllers\CompanyController::class,"show_ad"]);
+Route::get('/companies', [App\Http\Controllers\CompanyController::class,"show_ad"])->name('companies');
 Route::get('/company.showpost', [App\Http\Controllers\CompanyController::class,"show_post"]);
 Route::get('/company.showcase', [App\Http\Controllers\CompanyController::class,"show_case"]);
+Route::get('/company.updatead/{id}', [App\Http\Controllers\CompanyController::class,"view_updatead"]);
 
 Route::get('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"index"]);
-Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"show"]);
+// Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"user_status"]);
 Route::get('/jobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"status_show"]);
+Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"status"]);
+
 
 Route::post('/profile_update.create', [App\Http\Controllers\ProfileUpdateController::class,"edit"]);
 Route::post('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"edit"]);
 Route::post('/company.ad', [App\Http\Controllers\CompanyController::class,"edit_ad"]);
 Route::post('/company.post', [App\Http\Controllers\CompanyController::class,"edit_post"]);
+Route::post('/company.update/{id}', [App\Http\Controllers\CompanyController::class,"updatead"]);
 
 
-Route::delete('/company.delete', [App\Http\Controllers\CompanyController::class,"delete"]);
+Route::get('/company.deletead/{id}', [App\Http\Controllers\CompanyController::class,"deletead"]);
+Route::get('/company.deletepost/{id}', [App\Http\Controllers\CompanyController::class,"deletepost"]);
 
 
 Route::resource('profiles','App\HttpControllers\ProfileController');

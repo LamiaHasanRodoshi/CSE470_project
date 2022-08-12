@@ -45,7 +45,7 @@
                 <div class="col-md-3 ">
                     <div class="list-group ">
                     <a href="/company.post" class="list-group-item list-group-item-action active">Add new Post</a>
-                    <a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a>
+                    //<a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action ">Add new Ad</a>
                     <a href="/companies" class="list-group-item list-group-item-action ">Back</a>
                     
@@ -63,6 +63,11 @@
                             <hr>
                             <div class="row">
                                 <div class="col-md-8">
+
+                                @if(session()->has('success'))
+                                    <strong class="text-success">{{session()->get('success')}}</strong>
+                                 @endif
+
                                 <form action="{{url('/company.post')}}" method="post">
                                         @csrf
                                     <div class="form-group row">

@@ -63,26 +63,22 @@
                                     <div class="form-group row">
                                         <label for="text" class="col-12 col-form-label">Enter Title here</label> 
                                         <div class="col-12">
-                                        <input id="text" name="title" :value= "old('title')" placeholder="Enter Title here" class="form-control @error('title') is-invalid @enderror" required="required" type="text">
+                                        <input id="text" name="title" value= "" placeholder="Enter Title here" class="form-control" required="required" type="text">
                                         </div>
 
-                                        @error('title')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong><h4>'Title has already taken'</h4></strong>
-                                            </span>
-                                        @enderror  
+                                         
 
                                     </div>
                                     <div class="form-group row">
                                         <label for="text" class="col-12 col-form-label">Enter Ad description</label> 
                                         <div class="col-12">
-                                        <input id="text" name="ad" :value= "old('ad')" placeholder="Enter description here" class="form-control here" required="required" type="text">
+                                        <input id="text" name="ad" value= "" placeholder="Enter description here" class="form-control here" required="required" type="text">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="file" class="col-12 col-form-label">Upload video</label> 
                                         <div class="col-12">
-                                        <input class="browse-input" type="file" name="video" :value= "old('video')" required name="UploadedFile" id="UploadedFile"/>
+                                        <input class="browse-input" type="file" name="video" value= "old('video')" placeholder="Enter video" required name="UploadedFile" id="UploadedFile"/>
                                         </div>
                                     </div> 
                                     <div class="card-footer bg-light">

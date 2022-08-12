@@ -64,6 +64,7 @@
                                 <th scope="col"><h2><u>Applying Jobs</u></h2></th>
                                 <th scope="col"><h2><u>Approved Jobs</u></h2></th>
                                 <th scope="col"><h2><u>Rejected Jobs</u></h2></th>
+                                <th scope="col"><h2><u>Feedbacks</u></h2></th>
                                 <th scope="col"><h2><u>Action</u></h2></th>
                             </tr>
                         </thead>
@@ -77,9 +78,10 @@
                                 <td><h4>{{$status->applying_job}}</h4></td>
                                 <td><h4>{{$status->approved_job}}</h4></td>
                                 <td><h4>{{$status->rejected_job}}</h4></td>
+                                <td><h4>{{$status->feedbacks}}</h4></td>
                                 <td style="display:flex">
                                     <a href="">
-                                        <button class="btn btn-success btn-sm bg-blue-500">View</button>
+                                        <button class="btn btn-success btn-sm bg-blue-500">View profile</button>
                                     </a>
                                 </td> 
                             </tr>

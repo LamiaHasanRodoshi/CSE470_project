@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Company;
 use App\Models\Ad;
 use App\Models\Post;
+use DB;
 
 class CompanyController extends Controller
 {
@@ -56,20 +57,49 @@ class CompanyController extends Controller
 
         $post->save();
 
-        dd("saved");
-        //return view('companies');
+        //dd("saved");
+        return redirect()->back()->with('success','successfully uploaded..!!!');
     }
 
     public function show_post(){
-       $posts = Post::all();
-       return view('companies', compact('posts'));
+       $data = Post::all();
+       return view('companies', ['posts'=>$data]);
     }
 
     public function show_ad(){
         $data = Ad::all();
-        return view('companies',['ads'=>$data]);
+        return view('companies', ['ads'=>$data]);
     }
 
-    
+    public function deletead($id){
+            DB::table('ads')->where('id', $id)->delete();
+            return redirect()->back()->with('success','successfully deleted..!!!');
+    }
+    public function deletepost($id){
+        DB::table('posts')->where('id', $id)->delete();
+        return redirect()->back()->with('success','successfully deleted..!!!');
+    }
+
+    public function view_updatead($id){
+        $data = Ad::find($id);
+        return view('company.updatead', compact('data'));
+        
+    }
+    public function updatead(Request $request, $id){
+        
+        $data = Ad::find($id);
+        $data->update([
+            'title'=> $request->title,
+            'ad'=> $request->ad,
+            'video'=> $request->video,
+        ]);
+
+        $file=time().'.'.$video->getClientOriginalExtension();
+        $request->video->move('video',$file);
+        
+        return redirect()->route('companies');
+
+        
+    }
    
 }

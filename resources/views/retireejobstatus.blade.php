@@ -87,6 +87,12 @@
                                   <input type="text" name="rejected" placeholder="Enter Number of Rejected Jobs" class="form-control here" required="required" type="text">
                                 </div>
                               </div>
+                              <div class="form-group row">
+                                <label for="text" class="col-12 col-form-label">Enter Feedbacks</label> 
+                                <div class="col-12">
+                                  <input type="text" name="feedbacks" placeholder="Enter Feedbacks" class="form-control here" required="required" type="text">
+                                </div>
+                              </div>
                               <div class="form-group">
                                     <input class="btn btn-primary btn-block" type="submit"  value="Add"/>
                               </div>

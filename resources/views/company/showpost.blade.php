@@ -45,13 +45,17 @@
             <div class="row">
                 <div class="col-md-3 ">
                     <div class="list-group ">
-                    <a href="/company.showpost" class="list-group-item list-group-item-action active">Show Posts</a>
+                    //<a href="/company.showpost" class="list-group-item list-group-item-action active">Show Posts</a>
                     <a href="/company.post" class="list-group-item list-group-item-action">Add new Post</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action ">Add new Ad</a>
                     
                     </div> 
                 </div>
+                
                 <div class="col-md-9">
+                @if(session()->has('success'))
+                    <strong class="text-success">{{session()->get('success')}}</strong>
+                @endif
                     @foreach($posts as $post)
                     <div class="container">
                         <div class="row col-md-6 col-md-offset-2 custyle">
@@ -63,8 +67,9 @@
                                 <img src="{{$post->video}}" alt="Post video" class="pull-left img-responsive thumb margin10 img-thumbnail">
 
                                 <article><p>{{$post->post}}</p></article>
-                                <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
-                                <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td> 
+                                <td class="text-center">
+                                    <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                                    <a href="{{url('/company.deletepost/'.$post->id)}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td> 
                                 </div>
                         </div>
                     </div>

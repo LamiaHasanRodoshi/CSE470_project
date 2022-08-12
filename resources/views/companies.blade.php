@@ -45,13 +45,19 @@
             <div class="row">
                 <div class="col-md-3 ">
                     <div class="list-group ">
-                    <a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a>
+                    //<a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a>
                     <a href="/company.post" class="list-group-item list-group-item-action">Add new Post</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action ">Add new Ad</a>
                     
                     </div> 
                 </div>
+                
                 <div class="col-md-9">
+
+                @if(session()->has('success'))
+                                    <strong class="text-success">{{session()->get('success')}}</strong>
+                @endif
+
                 @foreach($ads as $ad)
                     <div class="container">
                         <div class="row col-md-6 col-md-offset-2 custyle">
@@ -63,8 +69,9 @@
                                 
                                     
                                     <article><p>{{$ad->ad}} </p></article>
-                                    <td class="text-center"><a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
-                                    <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td> 
+                                    <td class="text-center">
+                                        <a class='btn btn-info btn-xs' href="{{url('/company.updatead/'.$ad->id)}}"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                                        <a href="{{url('/company.deletead/'.$ad->id)}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Delete</a></td> 
                             </div>
                         </div>
                     </div>

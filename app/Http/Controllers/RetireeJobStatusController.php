@@ -37,6 +37,7 @@ class RetireeJobStatusController extends Controller
         $status->applying_job = $request->applying;
         $status->approved_job = $request->approved;
         $status->rejected_job = $request->rejected;
+        $status->feedbacks = $request->feedbacks;
 
         $status->save();
 
@@ -48,5 +49,20 @@ class RetireeJobStatusController extends Controller
     {
         $statuses = RetireeJobStatus::all();
         return view('jobstatus', compact('statuses'));
+    }
+
+    public function status()
+    {
+        $statuses = RetireeJobStatus::all();
+        return view('retireejobstatusupdate.view', compact('statuses'));
+    }
+
+    public function user_status(){
+        $status = RetireeJobStatus::all();
+        $email = Auth()->user()->email;
+        $status = RetireeJobStatus::find($email);
+        return view('retireejobstatusupdate.view', compact('status'));
+
+
     }
 }
