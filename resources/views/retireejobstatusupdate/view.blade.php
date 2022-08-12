@@ -1,4 +1,4 @@
-@include('layouts.heading')
+<!-- @include('layouts.heading')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +17,12 @@
             width: 100%;
             padding: 5px;
             margin: 15% 0;
-            /* box-shadow: 3px 3px 2px #ccc;
-            transition: 0.5s; */
+            
             
         }
        .row{
         padding:20px;
-        /* margin:20% 0; */
+        
        }
        .label{
         margin-top:100px;
@@ -70,7 +69,7 @@
                         </thead>
                         <tbody>
                             @foreach($statuses as $status)      
-                            <!-- <tr @if ($loop->odd) bg-gray @endif> -->
+                           
                             <tr>
                                 <th scope="row"><h4>{{$status->id}}</h4></th>
                                 <th><td><h4>{{$status->user_name}}</h4></td></th>
@@ -90,7 +89,7 @@
                 </table>
         </div>
 </body>
-</html>
+</html>-->
 
            
  
@@ -115,7 +114,7 @@
 
 
 
-<!-- @include('layouts.heading')
+@include('layouts.heading')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -175,4 +174,4 @@
     </div>
 </div>
 </body>
-</html> -->
+</html> 

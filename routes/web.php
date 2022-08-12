@@ -54,7 +54,7 @@ Route::get('/company.showcase', [App\Http\Controllers\CompanyController::class,"
 Route::get('/company.updatead/{id}', [App\Http\Controllers\CompanyController::class,"view_updatead"]);
 
 Route::get('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"index"]);
-// Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"user_status"]);
+Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"user_status"]);
 Route::get('/jobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"status_show"]);
 Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"status"]);
 

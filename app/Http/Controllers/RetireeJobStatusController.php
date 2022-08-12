@@ -60,9 +60,10 @@ class RetireeJobStatusController extends Controller
     public function user_status(){
         $status = RetireeJobStatus::all();
         $email = Auth()->user()->email;
-        $status = RetireeJobStatus::find($email);
-        return view('retireejobstatusupdate.view', compact('status'));
-
+        //$status = RetireeJobStatus::find($email);
+        //return view('retireejobstatusupdate.view', compact('status'));
+       // echo $email;
+        echo $email;
 
     }
 }
