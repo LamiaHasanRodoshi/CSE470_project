@@ -121,7 +121,7 @@
                     <strong class="text-success">{{session()->get('success')}}</strong>
                 @endif
 
-                <form action="{{ url('/profile_update.update/'.$data->email)}}" method="post">
+                <form action="{{ url('/profile_update.update/'.$data->id)}}" method="post">
                     @csrf
                     <div class="preview text-center">
                         <img class="preview-img" src="http://simpleicon.com/wp-content/uploads/account.png" alt="Preview Image" width="200" height="200" />

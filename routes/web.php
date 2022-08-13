@@ -54,7 +54,7 @@ Route::get('/company.showcase', [App\Http\Controllers\CompanyController::class,"
 Route::get('/company.updatead/{id}', [App\Http\Controllers\CompanyController::class,"view_updatead"]);
 Route::get('/profile_update.profileshow/{email}', [App\Http\Controllers\ProfileUpdateController::class,"one_profile"]);
 //Route::get('/profile_update.update/{email}', [App\Http\Controllers\ProfileController::class,"show_update"]);
-Route::get('/profile_update.update/{email}', [App\Http\Controllers\ProfileController::class,"edit_update"]);
+Route::get('/profile_update.update/{id}', [App\Http\Controllers\ProfileController::class,"edit_update"]);
 
 Route::get('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusController::class,"index"]);
 Route::get('/retireejobstatusupdate.view', [App\Http\Controllers\RetireeJobStatusController::class,"user_status"]);
@@ -78,7 +78,7 @@ Route::post('/retireejobstatus', [App\Http\Controllers\RetireeJobStatusControlle
 Route::post('/company.ad', [App\Http\Controllers\CompanyController::class,"edit_ad"]);
 Route::post('/company.post', [App\Http\Controllers\CompanyController::class,"edit_post"]);
 Route::post('/company.update/{id}', [App\Http\Controllers\CompanyController::class,"updatead"]);
-Route::post('/profile_update.update/{email}', [App\Http\Controllers\ProfileController::class,"profile_update"]);
+Route::post('/profile_update.update/{id}', [App\Http\Controllers\ProfileController::class,"profile_update"]);
 
 
 

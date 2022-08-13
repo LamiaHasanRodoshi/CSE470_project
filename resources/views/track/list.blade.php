@@ -86,6 +86,11 @@
                                     </a>
                                 </td> 
                                 <td style="display:flex">
+                                    <a href="{{url('/track.contact/'.$list->id)}}">
+                                        <button class="btn btn-success btn-sm bg-blue-500">Contact</button>
+                                    </a>
+                                </td> 
+                                <td style="display:flex">
                                     <a href="{{url('/track.approved/'.$list->id)}}">
                                         <button class="btn btn-success btn-sm bg-blue-500">Approved or Denied</button>
                                     </a>

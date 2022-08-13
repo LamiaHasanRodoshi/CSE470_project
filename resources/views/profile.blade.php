@@ -70,7 +70,7 @@
             @foreach($profiles as $profile)
             <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
                 <a href="{{url('/profile_update.create')}}" > Create Profile</a>
-                <a href="{{url('/profile_update.update/'.$profile->email)}}" > Update Profile</a>
+                <a href="{{url('/profile_update.update/'.$profile->id)}}" > Update Profile</a>
 
                 
             <br>
