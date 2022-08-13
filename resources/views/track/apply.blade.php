@@ -103,7 +103,7 @@
 
     </style>
     <meta charset="UTF-8">
-    <title>ProfileUpdate</title>
+    <title>Apply</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -115,17 +115,14 @@
     <div class="container">
         <div class="custab">
             <div class="row">
-                <p class="h2 text-center">Profile Create</p>
-                <form action="{{ url('/profile_update.create')}}" method="post">
+                <p class="h2 text-center">Apply for Job</p>
+                <br>
+                @if(session()->has('success'))
+                    <strong class="text-success">{{session()->get('success')}}</strong>
+                @endif
+                <form action="{{ url('/track.apply')}}" method="post">
                     @csrf
-                    <div class="preview text-center">
-                        <img class="preview-img" src="http://simpleicon.com/wp-content/uploads/account.png" alt="Preview Image" width="200" height="200"/>
-                        <div class="browse-button">
-                            <i class="fa fa-pencil-alt"></i>
-                            <input class="browse-input" type="file" name="photo" required name="UploadedFile" id="UploadedFile"/>
-                        </div>
-                        <span class="Error"></span>
-                    </div>
+                    <br><br>
                     <div class="form-group">
                         <label>Full Name:</label>
                         <input class="form-control" type="text" name="fullname" required placeholder="Enter Your Full Name"/>
@@ -147,26 +144,11 @@
                         <span class="Error"></span>
                     </div>
                     <div class="form-group">
-                        <label>bio:</label>
-                        <input class="form-control" type="text" name="bio" required placeholder="Enter your bio"/>
-                        <span class="Error"></span>
-                    </div>
-                
-                    <div class="form-group">
-                        <label>Experience:</label>
-                        <input class="form-control" type="text" name="experience" required placeholder="Enter your experience"/>
-                        <span class="Error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label>skills:</label>
-                        <input class="form-control" type="text" name="skills" required placeholder="Enter your skills"/>
-                        <span class="Error"></span>
-                    </div>
-                    <div class="form-group">
                         <label>cv:</label>
                         <input class="form-control" type="file" name="cv" required placeholder="Enter your CV"/>
                         <span class="Error"></span>
                     </div>
+                    
                     <div class="form-group">
                         <label>Gender:</label><br/>
                         <label><input type="radio" name="gender" required value="Male" checked /> Male</label>
@@ -174,8 +156,9 @@
                         <label><input type="radio" name="gender" required value="Other" /> Other</label>
                         <span class="Error"></span>
                     </div>
+                   
                     <div class="form-group">
-                        <input class="btn btn-primary btn-block" type="submit"  value="Create"/>
+                        <input class="btn btn-primary btn-block" type="submit"  value="Apply"/>
                     </div>
                 </form>
             </div>

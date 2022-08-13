@@ -124,8 +124,8 @@
                             </tbody>
                         </table>
                         
-                        <a href="#" class="btn btn-primary">My Experiences</a>
-                        <a href="#" class="btn btn-primary">My CV</a>
+                        <a href="/doc/Lamia_experiences" class="btn btn-primary">Experiences</a>
+                        <a href="/doc/Lamia CV" class="btn btn-primary">CV</a>
                         </div>
                     </div>
                     

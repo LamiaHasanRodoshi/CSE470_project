@@ -27,7 +27,7 @@ class ProfileUpdateController extends Controller
         $profile->skills = $request->skills;
         $profile->save();
 
-        dd("saved");
+        return redirect()->route('profile');
     }
 
     public function profileshow(){
@@ -40,5 +40,6 @@ class ProfileUpdateController extends Controller
         // return view('profile_update.profileshow', compact('profiles'));
         echo $profiles;
     }
+    
 
 }

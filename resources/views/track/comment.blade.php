@@ -35,10 +35,9 @@
             <div class="row">
                 <div class="col-md-3 ">
                     <div class="list-group ">
-                    <a href="/company.post" class="list-group-item list-group-item-action">Add new Post</a>
-                    <a href="/company.ad" class="list-group-item list-group-item-action active">Add new Ad</a>
-                    <a href="/companies" class="list-group-item list-group-item-action ">Back</a>
-                    <a href="/track.list" class="list-group-item list-group-item-action ">List of approved Retiree</a>
+                    
+                    <a href="/track.list" class="list-group-item list-group-item-action ">Back to List</a>
+                    
                     
                     </div> 
                 </div>
@@ -47,7 +46,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3 border-right">
-                                    <h4>Add New Ad</h4>
+                                    <h4>Add Comments here....!</h4>
                                 </div>
                                 
                             </div>
@@ -59,31 +58,18 @@
                                         <strong class="text-success">{{session()->get('success')}}</strong>
                                     @endif
 
-                                    <form action="{{url('/company.ad')}}" method="post">
+                                    <form action="{{url('/track.update_comment/'.$data->id)}}" method="post">
                                         @csrf
+                                   
                                     <div class="form-group row">
-                                        <label for="text" class="col-12 col-form-label">Enter Title here</label> 
+                                        <label for="text" class="col-12 col-form-label">Comment here</label> 
                                         <div class="col-12">
-                                        <input id="text" name="title" value= "" placeholder="Enter Title here" class="form-control" required="required" type="text">
-                                        </div>
-
-                                         
-
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="text" class="col-12 col-form-label">Enter Ad description</label> 
-                                        <div class="col-12">
-                                        <input id="text" name="ad" value= "" placeholder="Enter description here" class="form-control here" required="required" type="text">
+                                        <input id="text" name="comments" value= "" placeholder="Enter description here" class="form-control here" required="required" type="text">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="file" class="col-12 col-form-label">Upload video</label> 
-                                        <div class="col-12">
-                                        <input class="browse-input" type="file" name="video" value= "old('video')" placeholder="Enter video" required name="UploadedFile" id="UploadedFile"/>
-                                        </div>
-                                    </div> 
+                                   
                                     <div class="card-footer bg-light">
-                                            <button type="submit" class="btn btn-primary btn-sm">Upload Ad</button>
+                                            <button type="submit" class="btn btn-primary btn-sm">Comment</button>
                                     </div>
                                     </form>
                                 </div>

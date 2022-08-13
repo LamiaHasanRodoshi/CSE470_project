@@ -48,7 +48,7 @@
             <div class="label">
             <h1><b><u>Companies</u></b></h1>
             </div>
-
+              
             @foreach($shows as $show)
                 <table class="table table-striped custab">
                                 <div class="container">
@@ -68,7 +68,7 @@
                                                <tr><h2>{{$show->website}}</h2></tr>
                                                <tr><h1><font color="blue">Slogan:</font></h1></tr>
                                                <tr> <h2>{{$show->slogan}}</h2></tr>
-                                               <td class="text-center"> <a class='btn btn-info btn-xs' href="#"><span class="glyphicon glyphicon-edit"></span>Apply</a> 
+                                               <td class="text-center"> <a class='btn btn-info btn-xs' href="{{url('/track.apply')}}"><span class="glyphicon glyphicon-edit"></span>Apply</a> 
                                                 
                                         </div>
                                     </div>

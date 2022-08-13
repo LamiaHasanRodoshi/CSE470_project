@@ -38,15 +38,31 @@ class ProfileController extends Controller
     {
         //
     }
-
-    
-    public function update(Request $request, Profile $profile)
-    {
-        //
+    public function show_update(){
+       return view('profile_update.update');
     }
+    
+    public function edit_update($email){
+        
+        $data = Profile::find($email);
+        return view('profile_update.update', compact('data'));
+        // echo $persons;
+    }   
 
-    public function destroy(Profile $profile)
-    {
-        //
+    public function profile_update(Request $request, $email){
+        $persons= Profile::find($email);
+        $persons->update([
+            'avatar' => $request->photo,
+            'name' => $request->fullname,
+            'email' => $request->email,
+            'address' => $request->address,
+            'gender' => $request->gender,
+            'dob' => $request->dob,
+            'experience' => $request->experience,
+            'bio' => $request->bio,
+            'cv' => $request->cv,
+            'skills' => $request->skills,
+        ]);
+        return redirect()->back()->with('success','successfully updated..!!!');
     }
 }

@@ -68,7 +68,7 @@
                         </thead>
                         <tbody>
                             @foreach($jobs as $job)      
-                            <!-- <tr @if ($loop->odd) bg-gray @endif> -->
+                           
                             <tr>
                                 <th scope="row"><h4>{{$job->id}}</h4></th>
                                 <td><h4>{{$job->company_name}}</h4></td>
@@ -77,7 +77,7 @@
                                 <td><h4>{{$job->position}}</h4></td>
                                 <td><h4>{{$job->type}}</h4></td>
                                 <td style="display:flex">
-                                    <a href="">
+                                    <a href="{{url('/track.apply')}}">
                                         <button class="btn btn-success btn-sm bg-blue-500">Apply</button>
                                     </a>
                                 </td> 

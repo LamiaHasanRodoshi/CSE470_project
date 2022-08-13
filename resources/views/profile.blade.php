@@ -67,9 +67,10 @@
     <div class="container">
         <div class="custab">
             <div class="row">
+            @foreach($profiles as $profile)
             <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-                <A href="{{url('/profile_update.create')}}" > Create Profile</A>
-                <A href="{{url('/profile_update.update')}}" > Update Profile</A>
+                <a href="{{url('/profile_update.create')}}" > Create Profile</a>
+                <a href="{{url('/profile_update.update/'.$profile->email)}}" > Update Profile</a>
 
                 
             <br>
@@ -84,7 +85,7 @@
                     </div>
                     <div class="panel-body">
                     <div class="row">
-                    @foreach($profiles as $profile) 
+                     
                         <div class="col-md-3 col-lg-3 " align="center"> <img src=""   class="img-circle img-responsive">{{$profile->avatar}}</div>
                         <div class=" col-md-9 col-lg-9 "> 
                         <table class="table table-user-information">
@@ -127,15 +128,16 @@
                             </tbody>
                         </table>
                         
-                        <a href="#" class="btn btn-primary">My Experiences</a>
-                        <a href="#" class="btn btn-primary">My CV</a>
+                        <a href="/doc.Lamia_experiences" class="btn btn-primary">My Experiences</a>
+                        <a href="/doc.Lamia_CV" class="btn btn-primary">My CV</a>
                         </div>
                     </div>
-                    @endforeach
+                    
                     </div>
                     
                 </div>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>
