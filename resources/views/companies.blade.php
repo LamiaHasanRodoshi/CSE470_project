@@ -45,9 +45,10 @@
             <div class="row">
                 <div class="col-md-3 ">
                     <div class="list-group ">
-                    //<a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a>
+                    <!-- <a href="/company.showpost" class="list-group-item list-group-item-action">Show Posts</a> -->
                     <a href="/company.post" class="list-group-item list-group-item-action">Add new Post</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action ">Add new Ad</a>
+                    <a href="/company.list" class="list-group-item list-group-item-action ">List of approved Retiree</a>
                     
                     </div> 
                 </div>

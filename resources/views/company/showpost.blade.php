@@ -45,18 +45,20 @@
             <div class="row">
                 <div class="col-md-3 ">
                     <div class="list-group ">
-                    //<a href="/company.showpost" class="list-group-item list-group-item-action active">Show Posts</a>
+                    <a href="/company.showpost" class="list-group-item list-group-item-action active">Show Posts</a>
                     <a href="/company.post" class="list-group-item list-group-item-action">Add new Post</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action ">Add new Ad</a>
-                    
+                    <a href="/company.list" class="list-group-item list-group-item-action ">List of approved Retiree</a>
+
                     </div> 
                 </div>
-                
-                <div class="col-md-9">
                 @if(session()->has('success'))
                     <strong class="text-success">{{session()->get('success')}}</strong>
                 @endif
-                    @foreach($posts as $post)
+                @foreach($posts as $post)
+                <div class="col-md-9">
+                
+                    
                     <div class="container">
                         <div class="row col-md-6 col-md-offset-2 custyle">
                        
@@ -73,9 +75,9 @@
                                 </div>
                         </div>
                     </div>
-                 @endforeach
                     
                 </div>
+                @endforeach
             </div>
         </div>
 </body>

@@ -105,7 +105,7 @@
         		    </div>
 
                     <div class="list-group ">
-                            <a href="/retireejobstatusupdate.view" class="btn btn-primary btn-block">Show Job Status</a>
+                            <a href="/retireejobstatusupdate.view" class="btn btn-primary btn-block">Show my Job Status</a>
                     </div> 
 		        </div>
 		    </div>

@@ -38,6 +38,7 @@
                     <a href="/company.post" class="list-group-item list-group-item-action">Add new Post</a>
                     <a href="/company.ad" class="list-group-item list-group-item-action active">Add new Ad</a>
                     <a href="/companies" class="list-group-item list-group-item-action ">Back</a>
+                    <a href="/company.list" class="list-group-item list-group-item-action ">List of approved Retiree</a>
                     
                     </div> 
                 </div>

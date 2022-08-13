@@ -29,4 +29,16 @@ class ProfileUpdateController extends Controller
 
         dd("saved");
     }
+
+    public function profileshow(){
+        $profiles = Profile::all();
+        return view ('profile_update.profileshow', compact('profiles'));
+    }
+
+    public function one_profile($email){
+        $profiles = Profile::where('email',$email)->get();
+        // return view('profile_update.profileshow', compact('profiles'));
+        echo $profiles;
+    }
+
 }

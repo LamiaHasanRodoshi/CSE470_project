@@ -80,7 +80,7 @@
                                 <td><h4>{{$status->rejected_job}}</h4></td>
                                 <td><h4>{{$status->feedbacks}}</h4></td>
                                 <td style="display:flex">
-                                    <a href="">
+                                    <a href="/profile_update.profileshow/.$status->email">
                                         <button class="btn btn-success btn-sm bg-blue-500">View profile</button>
                                     </a>
                                 </td> 

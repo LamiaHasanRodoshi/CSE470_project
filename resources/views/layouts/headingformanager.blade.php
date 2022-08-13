@@ -132,7 +132,7 @@
         <li><a href="/homeformanager">Home</a></li>
             <li><a href="/companies">Company Profile</a></li>
             
-            <li><a href="#">Employees</a></li>
+            <li><a href="/profile_update.profileshow">Employees</a></li>
             <li><a href="/jobstatus">Job Status</a></li>
             <li><a href="/dashboard">Logout</a></li>
             <li class="box">{{ Auth::user()->name }}</a></li>
